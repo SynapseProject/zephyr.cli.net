@@ -68,14 +68,13 @@ namespace zephyr.cli.net
 
             ConsoleColor defaultColor = Console.ForegroundColor;
 
-            Console_WriteLine($"zephyr.cli.exe, Version: {typeof(Program).Assembly.GetName().Version}\r\n", ConsoleColor.Green);
+            Console_WriteLine($"zephyr.exe, Version: {typeof(Program).Assembly.GetName().Version}\r\n", ConsoleColor.Green);
             Console.WriteLine("Syntax:");
-            Console_WriteLine("  zephyr.cli.exe {0}libraryShortName{1} {0}actionTopic{1} {0}actionParameters{1}\r\n", ConsoleColor.Cyan, "{", "}");
+            Console_WriteLine("  zephyr {0}libraryShortName{1} {0}actionTopic{1} {0}actionParameters{1}\r\n", ConsoleColor.Cyan, "{", "}");
 
-            Console.WriteLine("  Examples:");
-            Console.WriteLine("     zephyr.cli datatransformation json convert file:c\\temp\\products.json");
+            Console.WriteLine("  Example:");
+            Console.WriteLine("     zephyr datatransformation json convert file:c\\temp\\products.json");
             Console.WriteLine("         outputFormat:yaml\r\n");
-            Console.WriteLine("     zephyr.cli crypto werkit foo:bar hello:kitty");
             
             if (haveError)
                 Console_WriteLine($"\r\n\r\n*** Last error:\r\n{message}\r\n", ConsoleColor.Red);
